@@ -107,7 +107,26 @@ export function findFirstFailingStudent(students) {
 }
 
 /**
- * Generates a summary object with the minimum, maximum, and average scores.
+ * Counts students that scored above 70.
+ * @param {Array<{name: string, score: number}>} students A list of students.
+ * @returns {number} The number of students that scored above 70.
+ */
+export function countStudentsAbove70(students) {
+    // your code here
+}
+
+/**
+ * Groups students into "pass" and "fail" categories based on their scores.
+ * Students who scored 60 or above are classified as "pass", while those below 60 are classified as "fail".
+ * @param {Array<{name: string, score: number}>} students A list of students.
+ * @returns {{pass: Array<{name: string, score: number}>, fail: Array<{name: string, score: number}>}}
+ */
+export function groupStudentsByPassFail(students) {
+    // your code here
+}
+
+/**
+ * Returns a Summary Object with Min, Max, and Average Scores.
  * @param {Array<{name: string, score: number}>} students A list of students.
  * @returns {{min: number, max: number, average: number}} An object containing min, max, and average scores.
  */
