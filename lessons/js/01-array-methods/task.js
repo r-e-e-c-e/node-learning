@@ -1,7 +1,7 @@
 /**
  * Returns the total number of students.
- * * @param {Array<{name: string, score: number}>} students A list of students.
- * * @returns {number} The total number of students.
+ * @param {Array<{name: string, score: number}>} students A list of students.
+ * @returns {number} The total number of students.
  */
 export function getNumOfStudents(students) {
     // your code here
