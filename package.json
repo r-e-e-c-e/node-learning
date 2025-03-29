@@ -1,0 +1,11 @@
+{
+    "type": "module",
+    "scripts": {
+        "js:01": "node lessons/js/01-array-methods/test.js",
+        "js:02": "node lessons/js/02-strings/test.js"
+    },
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "gradient-string": "^3.0.0"
+    }
+}
