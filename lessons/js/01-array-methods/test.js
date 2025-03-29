@@ -5,6 +5,15 @@ import {
     sortStudentsByScore,
     getTopScorer,
     getBGradeStudentsNames,
+    getNumOfStudents,
+    sortStudentsByName,
+    getStudentNamesUppercase,
+    didAllStudentsPass,
+    isTherePerfectScore,
+    findFirstFailingStudent,
+    countStudentsAbove70,
+    groupStudentsByPassFail,
+    getScoreSummary,
 } from './task.js';
 import { Solution } from '../../../solutions/js/01-array-methods/solution.js';
 import { getFolderName, runTests } from '../../../utils/index.js';
@@ -19,6 +28,13 @@ const students = [
 ];
 
 const testCases = [
+    {
+        fn: getNumOfStudents,
+        args: [students],
+        expected: Solution.getNumOfStudents(students),
+        description: 'getNumOfStudents should return total number of students',
+        compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
+    },
     {
         fn: getTopStudentsNames,
         args: [students],
@@ -48,6 +64,13 @@ const testCases = [
         compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
     },
     {
+        fn: sortStudentsByName,
+        args: [students],
+        expected: Solution.sortStudentsByName(students),
+        description: 'sortStudentsByName should return students sorted by name',
+        compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
+    },
+    {
         fn: getTopScorer,
         args: [students],
         expected: Solution.getTopScorer(students),
@@ -58,7 +81,56 @@ const testCases = [
         fn: getBGradeStudentsNames,
         args: [students],
         expected: Solution.getBGradeStudentsNames(students),
-        description: 'getBGradeStudentsNames should return names of students students who scored between 60 and 70',
+        description: 'getBGradeStudentsNames should return names of students who scored between 60 and 70',
+        compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
+    },
+    {
+        fn: getStudentNamesUppercase,
+        args: [students],
+        expected: Solution.getStudentNamesUppercase(students),
+        description: 'getStudentNamesUppercase should return names of students in uppercase',
+        compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
+    },
+    {
+        fn: didAllStudentsPass,
+        args: [students],
+        expected: Solution.didAllStudentsPass(students),
+        description: 'didAllStudentsPass should return true if all students scored at least 60',
+        compareFn: (result, expected) => assert.strictEqual(result, expected),
+    },
+    {
+        fn: isTherePerfectScore,
+        args: [students],
+        expected: Solution.isTherePerfectScore(students),
+        description: 'isTherePerfectScore should return true if any student scored 100',
+        compareFn: (result, expected) => assert.strictEqual(result, expected),
+    },
+    {
+        fn: findFirstFailingStudent,
+        args: [students],
+        expected: Solution.findFirstFailingStudent(students),
+        description: 'findFirstFailingStudent should return the first student who scored below 60',
+        compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
+    },
+    {
+        fn: countStudentsAbove70,
+        args: [students],
+        expected: Solution.countStudentsAbove70(students),
+        description: 'countStudentsAbove70 should return the number of students who scored above 70',
+        compareFn: (result, expected) => assert.strictEqual(result, expected),
+    },
+    {
+        fn: groupStudentsByPassFail,
+        args: [students],
+        expected: Solution.groupStudentsByPassFail(students),
+        description: 'groupStudentsByPassFail should group students into pass and fail categories',
+        compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
+    },
+    {
+        fn: getScoreSummary,
+        args: [students],
+        expected: Solution.getScoreSummary(students),
+        description: 'getScoreSummary should return an object with min, max, and average score',
         compareFn: (result, expected) => assert.deepStrictEqual(result, expected),
     },
 ];
