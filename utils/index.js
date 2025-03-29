@@ -91,5 +91,11 @@ export function runTests(testName, testCases) {
             logTaskFail(description, expected, received);
         });
         console.log();
+        console.log(
+            chalk.bgRed.bold(
+                ` --- ${failedTests.length} test${failedTests.length === 1 ? '' : 's'} failed in ${testName}! --- `
+            )
+        );
+        console.log();
     }
 }
